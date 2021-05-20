@@ -11,6 +11,7 @@ class Api::V1::ItemsController < ApplicationController
             render json: item, status: :accepted  #sends status code to front end
         else
             render json: { errors: item.errors.full_messages }, status: :unprocessible_entity
+        end
     end 
 
     private
