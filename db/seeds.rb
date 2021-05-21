@@ -16,6 +16,7 @@ selfcare = Category.create(name: "Self Care")
 home = Category.create(name: "Home")
 
 
+
 Item.create(title: "Cappadocia, Turkey", description: "Where the hot air balloons put on a show every morning", image_url: "https://s3.amazonaws.com/fathom_media/photos/Capadocia_fairy_chimneys.jpg.900x600_q85_crop.jpg",
                    url: "https://fathomaway.com/hot-air-balloon-cappadocia-turkey", category_id: travel.id) 
 

@@ -8,7 +8,7 @@ class Api::V1::ItemsController < ApplicationController
     def create 
         item = Item.new(item_params)
         if item.save 
-            render json: item, status: :accepted  #sends status code to front end
+            render json: ItemSerializer.new(item), status: :accepted  #sends status code to front end
         else
             render json: { errors: item.errors.full_messages }, status: :unprocessible_entity
         end
