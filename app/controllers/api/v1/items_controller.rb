@@ -21,4 +21,4 @@ class Api::V1::ItemsController < ApplicationController
     end 
 end
 
-#since strong params is nested, data sent through fetch also needs to be nested.
+
