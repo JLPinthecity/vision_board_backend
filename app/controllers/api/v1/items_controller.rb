@@ -25,12 +25,20 @@ class Api::V1::ItemsController < ApplicationController
         render json: {message: "successfully deleted #{item.title}"}
     end
 
+    def update
+          item = Item.find(params[:id])
+        if item.update(item_params)
+          render json: ItemSerializer.new(item)
+        else
+          render json: {error: "could not save #{item.title}"}
+        end
+    end 
 
 
     private
 
     def item_params 
-        params.require(:item).permit(:title, :description, :image_url, :url, :category_id)
+        params.require(:item).permit(:title, :description, :image_url, :url, :category_id, :id)
     end 
 end
 
