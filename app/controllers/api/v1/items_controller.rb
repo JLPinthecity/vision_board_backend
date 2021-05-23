@@ -14,6 +14,11 @@ class Api::V1::ItemsController < ApplicationController
         end
     end 
 
+    def show
+    end
+
+
+
     private
 
     def item_params 
